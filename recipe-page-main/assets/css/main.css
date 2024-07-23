@@ -36,22 +36,23 @@ hr {
 }
 
 ul {
-  list-style: none; /* 기본 마커 제거 */
+  list-style: none; /* remove default marker */
   padding-left: 0;
 }
 
 li {
   position: relative;
-  padding-left: 1.5em; /* 마커와 텍스트 사이에 여백 추가 */
+  padding-left: 1.5em; /* add margin between marker and text */
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
 ul li::before {
-  content: '•'; /* 원하는 마커를 정의 */
+  /* new marker */
+  content: '•';
   position: absolute;
   left: 0;
-  color: hsl(32, 56%, 31%); /* 마커 색상 설정 */
-  font-size: 1.2em; /* 마커 크기 설정 */
+  color: hsl(32, 56%, 31%);
+  font-size: 1.2em;
 }
 
 li span {
@@ -79,9 +80,8 @@ main {
 section {
   width: 100%;
 }
-/* recipe-intro */
 
-.recipe-intro img {
+.recipe-intro__img {
   width: 100%;
   border-radius: 10px;
 }
@@ -93,7 +93,7 @@ section {
   padding: 0.5rem;
 }
 
-.recipe-intro p {
+.recipe-intro__text {
   padding: 0.5rem;
 }
 
@@ -103,36 +103,35 @@ section {
   margin: 0.5rem;
 }
 
-.recipe-intro__prep h3 {
+.recipe-intro__prep-title {
   color: hsl(332, 51%, 32%);
   font-size: 17px;
 }
 
 /* recipe-content */
 
-.recipe-content__item {
+.recipe-content-item {
   padding: 0.5rem;
 }
 
-.recipe-content__item table {
+.recipe-content-item__table {
   width: 100%;
   padding: 0.5rem;
   margin: 0.5rem;
   border-collapse: collapse; /* 분리되어있던 밑줄을 하나로 */
 }
 
-.recipe-content__item td {
+.recipe-content-item__table-data {
   border-bottom: 1px solid hsl(30, 18%, 87%);
   padding: 0.5rem;
   margin: 0.5rem;
 }
 
-.recipe-content__item td:last-child {
+.recipe-content-item__table-data:last-child {
   font-weight: bold;
   color: hsl(32, 56%, 31%);
 }
 
-ol,
-.instructions {
+.recipe-content-item__instruction {
   margin: 0.5rem 0.5rem 0.5rem 1rem;
 }
